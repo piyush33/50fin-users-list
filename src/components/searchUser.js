@@ -7,7 +7,7 @@ const SearchUser = ({ feedData, setFeedData }) => {
     let searchItem = feedData.filter((item) => {
       if (search === "") {
         return true;
-      } else if (item.name.includes(search) || item.email.includes(search)) {
+      } else if (item.name.toLowerCase().includes(search.toLowerCase()) || item.email.includes(search.toLowerCase())) {
         return true;
       }
       return false;
